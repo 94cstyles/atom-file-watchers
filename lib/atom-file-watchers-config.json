@@ -1,0 +1,25 @@
+[{
+  "fileType": "Sass",
+  "fileExtension": ".sass .scss",
+  "programPath": "$installationDir$/node-sass",
+  "command": "$FilePath$ $FileDir$/$FileNameWithoutExtension$.css",
+  "exclude": "./node_modules"
+}, {
+  "fileType": "Less",
+  "fileExtension": ".less",
+  "programPath": "$installationDir$/lessc",
+  "command": "-x $FilePath$ $FileDir$/$FileNameWithoutExtension$.css",
+  "exclude": "./node_modules"
+}, {
+  "fileType": "TypeScript",
+  "fileExtension": ".ts .tsx",
+  "programPath": "$installationDir$/tsc",
+  "command": "--target es5 $FilePath$ --outfile $FileDir$/$FileNameWithoutExtension$.js",
+  "exclude": "./node_modules"
+}, {
+  "fileType": "CoffeeScript",
+  "fileExtension": ".coffee",
+  "programPath": "$installationDir$/coffee",
+  "command": "-b -o $FileDir$ -c $FilePath$",
+  "exclude": "./node_modules"
+}]

@@ -1,0 +1,16 @@
+{
+  "name": "atom-file-watchers",
+  "main": "./lib/file-watchers",
+  "version": "0.0.1",
+  "description": "Automatically compiles to the specified type of files",
+  "repository": "https://github.com/TOP-Chao/atom-file-watchers",
+  "license": "MIT",
+  "Keywords": ["file watche", "auto compile", "Sass", "Less", "TypeScript", "CoffeeScript"],
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "glob": "^6.0.1",
+    "parse-import": "^2.0.0"
+  }
+}
