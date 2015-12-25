@@ -1,7 +1,7 @@
 {
   "name": "atom-file-watchers",
   "main": "./lib/file-watchers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatically compiles to the specified type of files",
   "repository": "https://github.com/TOP-Chao/atom-file-watchers",
   "license": "MIT",
