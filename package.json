@@ -1,16 +1,33 @@
 {
   "name": "atom-file-watchers",
   "main": "./lib/file-watchers",
-  "version": "0.0.2",
-  "description": "Automatically compiles to the specified type of files",
+  "version": "0.0.3",
+  "description": "Save the files auto execute the command. Mainly used to compile Sass, Less, TypeScript, CoffeeScript, ECMAScript 6 and other file",
   "repository": "https://github.com/TOP-Chao/atom-file-watchers",
   "license": "MIT",
-  "Keywords": ["file watche", "auto compile", "Sass", "Less", "TypeScript", "CoffeeScript"],
+  "Keywords": [
+    "file watche",
+    "auto compile",
+    "command",
+    "Sass",
+    "Less",
+    "TypeScript",
+    "CoffeeScript",
+    "ECMAScript 6"
+  ],
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
     "glob": "^6.0.1",
+    "minimatch": "^3.0.0",
     "parse-import": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13"
+  },
+  "scripts": {
+    "prepublish": "babel -d lib/ src/ --presets es2015 --plugins add-module-exports"
   }
 }

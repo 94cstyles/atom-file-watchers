@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Sass",
+        "match": "**/*.@(sass|scss)",
+        "path": "$installationDir$/node-sass",
+        "command": "$FilePath$ $FileDir$/$FileNameWithoutExtension$.css"
+    },
+    {
+        "name": "Less",
+        "match": "**/*.less",
+        "path": "$installationDir$/lessc",
+        "command": "-x $FilePath$ $FileDir$/$FileNameWithoutExtension$.css"
+    },
+    {
+        "name": "TypeScript",
+        "match": "**/*.@(ts|tsx)",
+        "path": "$installationDir$/tsc",
+        "command": "--target es5 $FilePath$ --outfile $FileDir$/$FileNameWithoutExtension$.js"
+    },
+    {
+        "name": "CoffeeScript",
+        "match": "**/*.coffee",
+        "path": "$installationDir$/coffee",
+        "command": "-b -o $FileDir$ -c $FilePath$"
+    },
+    {
+        "name": "ES6",
+        "match": "**/*.1.es6",
+        "path": "$installationDir$/babel",
+        "command": "$FilePath$ --out-file $FileDir$/$FileNameWithoutExtension$.js --presets es2015"
+    }
+]

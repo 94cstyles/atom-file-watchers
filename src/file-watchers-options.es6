@@ -1,24 +1,13 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _config = require("../config.json");
-
-var _config2 = _interopRequireDefault(_config);
-
-var _units = require("./helper/units");
-
-var _units2 = _interopRequireDefault(_units);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import config from "../config.json";
+import units from "./helper/units";
 
 /**
  * 插件配置选项
  * @type {Object}
  */
-var options = {
+let options = {
     showSuccessCompilingNotification: {
         title: 'Show success notification',
         description: 'If you enable. Successful execution the command will give prompt',
@@ -36,10 +25,10 @@ var options = {
 };
 
 //默认的npm全局安装目录
-var installationDir = _units2.default.getNpmInstallationDir();
+const installationDir = units.getNpmInstallationDir();
 //根据配置文件添加配置选项
-_config2.default.forEach(function (watch, index) {
-    watch.path = _units2.default.formatPath(watch.path.replace(/\$installationDir\$/g, installationDir));
+config.forEach(function(watch, index) {
+    watch.path = units.formatPath(watch.path.replace(/\$installationDir\$/g, installationDir));
 
     options['compile@' + watch.name + '@enabled'] = {
         title: 'Enable \'' + watch.name + '\' watch',
@@ -70,5 +59,4 @@ _config2.default.forEach(function (watch, index) {
     };
 });
 
-exports.default = options;
-module.exports = exports['default'];
+export default options;
