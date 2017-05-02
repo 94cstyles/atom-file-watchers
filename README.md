@@ -1,4 +1,4 @@
-# atom-file-watchers package
+# atom-file-watchers (The project stop maintenance)
 Save the files auto execute the command <br /> Mainly used to compile Sass, Less, TypeScript, CoffeeScript, ECMAScript 6 and other file
 
 ## Install
